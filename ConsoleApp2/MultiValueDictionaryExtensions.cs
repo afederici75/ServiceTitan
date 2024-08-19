@@ -60,7 +60,7 @@ public static class MultiValueDictionaryExtensions
         return result;
     }
 
-    private static void FlattenBoth<K, V>(IMultiValueDictionary<K, V> instance, IMultiValueDictionary<K, V> other, out IEnumerable<KeyValuePair<K, V>> a, out IEnumerable<KeyValuePair<K, V>> b) where K : notnull
+    static void FlattenBoth<K, V>(IMultiValueDictionary<K, V> instance, IMultiValueDictionary<K, V> other, out IEnumerable<KeyValuePair<K, V>> a, out IEnumerable<KeyValuePair<K, V>> b) where K : notnull
     {
         a = instance.Flatten();
         b = other.Flatten();
