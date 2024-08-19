@@ -102,7 +102,7 @@ public static class MultiValueDictionaryTests
 
     // Union tests
 
-    public static void Union()
+    static void Union()
     {
         // Setup
         var a = MultiValueDictionaryTests.CreateTestDictionary();
@@ -118,7 +118,7 @@ public static class MultiValueDictionaryTests
         Assert(results.Count() == MultiValueDictionaryTests.TotalCount, "Wrong count after union");
     }
 
-    public static void Intersection()
+    static void Intersection()
     {
         // Setup
         var a = MultiValueDictionaryTests.CreateTestDictionary();
@@ -136,7 +136,7 @@ public static class MultiValueDictionaryTests
         Assert(resultset.Count() == 1, "Should be 1 (cars/bmw)");
     }
 
-    public static void Difference()
+    static void Difference()
     {
         // Setup
         var a = MultiValueDictionaryTests.CreateTestDictionary();
@@ -152,7 +152,7 @@ public static class MultiValueDictionaryTests
         Assert(results.Count() == MultiValueDictionaryTests.AnimalsCount + 1, "Should be the animals count plus one car");
     }
 
-    public static void SymmetricDifference()
+    static void SymmetricDifference()
     {
         // Setup
         var a = MultiValueDictionaryTests.CreateTestDictionary();
